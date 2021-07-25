@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI';
+}
+nav {
+    background: #0082e6;
+    height: 60px;
+    width: 100%;
+}
+label.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 60px;
+    padding: 0 50px;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 5px;
+}
+nav ul li a {
+    color: white;
+    font-style: 20px;
+    padding: 5px 18px;
+    border-radius: 20px;
+}
+a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+
+
+
+@media (max-width : 1009px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+@media (max-width : 959px) {
+    .checkbtn {
+        display: block;
+
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 60px;
+        left: -100%;
+        text-align: center;
+        transition: .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 10px;
+    }
+    nav ul li a {
+        font-size: 17px;
+    }
+    a:hover {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+@media (max-width : 480px) {
+    label.logo {
+        font-size: 25px;
+        padding-left: 45px;
+    }
+}
+
+section {
+    background: url(./cover.png) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
